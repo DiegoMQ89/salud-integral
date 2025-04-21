@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Citas - Salud Integral</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Salud Integral</h1>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <img src="images/menu-icon.png" alt="Menú">
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="appointments.html">Mis Citas</a></li>
+                    <li><a href="create-appointment.html">Nueva Cita</a></li>
+                    <li><a href="#" id="logoutLink">Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+            <button id="themeToggle" class="btn secondary" style="margin-left:1rem;">🌙</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="appointments-section">
+            <h2>Mis Citas Médicas</h2>
+            <a href="create-appointment.html" class="btn primary">Solicitar Nueva Cita</a>
+            
+            <div id="appointmentsMessage" class="message"></div>
+            
+            <div class="appointments-list" id="appointmentsList">
+                <!-- Las citas se cargarán aquí dinámicamente -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Salud Integral. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/appointments.js"></script>
+</body>
+</html>

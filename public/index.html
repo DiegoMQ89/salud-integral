@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro Médico Salud Integral</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Salud Integral</h1>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <img src="images/menu-icon.png" alt="Menú">
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="login.html">Ingresar</a></li>
+                    <li><a href="register.html">Registrarse</a></li>
+                </ul>
+            </nav>
+            <button id="themeToggle" class="btn secondary" style="margin-left:1rem;">🌙</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Bienvenido a Salud Integral</h2>
+            <p>Gestiona tus citas médicas de manera fácil y rápida</p>
+            <div class="buttons">
+                <a href="login.html" class="btn primary">Ingresar</a>
+                <a href="register.html" class="btn secondary">Registrarse</a>
+            </div>
+        </section>
+
+        <section class="services">
+            <h3>Nuestros Servicios</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h4>Medicina General</h4>
+                    <p>Atención médica integral para toda la familia</p>
+                </div>
+                <div class="service-card">
+                    <h4>Odontología</h4>
+                    <p>Cuidado dental profesional y preventivo</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Salud Integral. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+</body>
+</html>

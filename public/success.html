@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operación Exitosa - Salud Integral</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Salud Integral</h1>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <img src="images/menu-icon.png" alt="Menú">
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="appointments.html">Mis Citas</a></li>
+                    <li><a href="create-appointment.html">Nueva Cita</a></li>
+                    <li><a href="#" id="logoutLink">Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+            <button id="themeToggle" class="btn secondary" style="margin-left:1rem;">🌙</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="success-section">
+            <div class="success-card">
+                <h2 id="successTitle">Operación Exitosa</h2>
+                <p id="successMessage">La operación se ha completado correctamente.</p>
+                <a href="appointments.html" class="btn primary">Volver a Mis Citas</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Salud Integral. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="/js/auth.js"></script>
+    <script>
+        // Mostrar mensaje específico basado en parámetros URL
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const action = urlParams.get('action');
+            const title = document.getElementById('successTitle');
+            const message = document.getElementById('successMessage');
+            
+            if (action === 'create') {
+                title.textContent = 'Cita Agendada';
+                message.textContent = 'Tu cita ha sido agendada exitosamente. Te hemos enviado un correo de confirmación.';
+            } else if (action === 'update') {
+                title.textContent = 'Cita Actualizada';
+                message.textContent = 'Los cambios en tu cita han sido guardados exitosamente.';
+            } else if (action === 'cancel') {
+                title.textContent = 'Cita Cancelada';
+                message.textContent = 'Tu cita ha sido cancelada exitosamente.';
+            }
+        });
+    </script>
+</body>
+</html>
